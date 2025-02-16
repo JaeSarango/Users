@@ -14,8 +14,8 @@ const PlaceHolder = () => {
   const { paginatedUsers, handlePageChange, totalPages } = useUsers();
 
   return (
-    <div className="flex flex-col gap-5 justify-center items-center">
-      <div className="flex gap-5 justify-evenly">
+    <div className="h-screen flex flex-col gap-5 ">
+      <div className="flex flex-col md:flex-row gap-5 justify-evenly">
         {paginatedUsers?.map((user: placeHolderProps) => (
           <div
             className="border-2 border-gray-300 rounded-md p-2"
@@ -27,12 +27,14 @@ const PlaceHolder = () => {
           </div>
         ))}
       </div>
-      <Pagination
-        showControls
-        initialPage={1}
-        total={totalPages}
-        onChange={handlePageChange}
-      />
+      <div className="flex justify-center items-center mt-10">
+        <Pagination
+          showControls
+          initialPage={1}
+          total={totalPages}
+          onChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 };

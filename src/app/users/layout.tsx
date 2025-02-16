@@ -11,7 +11,9 @@ const UsersLayout = ({ children }: UsersLayoutProps) => {
       <div className="flex flex-col justify-between items-center mb-10 ">
         <h1 className="text-2xl font-bold mb-7">Users</h1>
         <Link href="/">
-          <Button>Home</Button>
+          <Button color="primary" variant="shadow">
+            Home
+          </Button>
         </Link>
       </div>
       {children}
